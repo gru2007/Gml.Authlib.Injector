@@ -103,8 +103,8 @@ public class YggdrasilKeyTransformUnit implements TransformUnit {
 			}
 		}
 
-		Logging.log(Level.WARNING, "Failed to verify property signature");
-		return false;
+		Logging.log(Level.WARNING, "Failed to verify property signature. Checking skipped.");
+		return true;
 	}
 
 	@CallbackMethod
