@@ -62,7 +62,7 @@ public class QueryProfileFilter implements URLFilter {
 		try {
 			uuid = fromUnsignedUUID(matcher.group("uuid"));
 		} catch (IllegalArgumentException e) {
-			uuid = UUID.nameUUIDFromBytes("TEST".getBytes()).toString();
+			uuid = java.util.UUID.randomUUID();
 		}
 
 		boolean withSignature = false;
